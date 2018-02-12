@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/10/项目集/" data-id="cjdk9eh230001f4xcgn8nqno2" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/10/项目集/" data-id="cjdka33ih0000w8xcj8arcr2q" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -133,7 +133,7 @@
       
         <ol>
 <li><p>必填，长度为~字符<br>区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,<br>其他则为中文字符。注意中文占两个字符 </p>
-<figure class="highlight plain"><figcaption><span>checklength(name) &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    var len = document.getElementById(&apos;name&apos;).val();</span><br><span class="line">    var sum = 0;</span><br><span class="line">    var codeval;</span><br><span class="line">    for (let i = 0;i &lt; len.length;i++) &#123;</span><br><span class="line">        codeval = len.charCodeAt(i);</span><br><span class="line">        if (codeval &gt;= 0x00</span><br><span class="line">        &amp;&amp; codeval &lt;= 0xFF) &#123;</span><br><span class="line">            sum = sum + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            sum = sum + 2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; `</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function checklength(name) &#123;</span><br><span class="line">    var len = document.getElementById(&apos;name&apos;).val();</span><br><span class="line">    var sum = 0;</span><br><span class="line">    var codeval;</span><br><span class="line">    for (let i = 0;i &lt; len.length;i++) &#123;</span><br><span class="line">        codeval = len.charCodeAt(i);</span><br><span class="line">        if (codeval &gt;= 0x00</span><br><span class="line">        &amp;&amp; codeval &lt;= 0xFF) &#123;</span><br><span class="line">            sum = sum + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            sum = sum + 2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; `</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>验证密码，邮箱，手机号码等利用正则表达式</p>
 </li>
@@ -145,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/20/表单验证/" data-id="cjdk9eh1t0000f4xcv4dbn395" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/20/表单验证/" data-id="cjdka33j20003w8xcwnrpbmho" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -183,39 +183,15 @@
       
         <p></p><h2>1 水平居中</h2><br>1-1  行内元素<br>设置text-align: center<br>1-2  定宽块状元素<br>设置左右margin值为auto<p></p>
 <p></p><h2>2 垂直居中</h2><br>2-1  父元素高度确定的单行文本<br>设置line-height的值为height;<p></p>
-<p></p><h2>3 水平和垂直居中(常见div)</h2><br>3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器<br><code>.one {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
-}</code><br>3-2  行内元素居中比如文字<br><code>.one {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-}</code><br>3-3  移动端常使用css3的transform:translate(x,y)属性<br><code>.one {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}</code><br>3-4  使用calc 支持Firefox 4 及更高版本浏览器，对于更早版本的浏览器，需要添加前缀，不支持IE8。<br><code>.one {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
-}</code><p></p>
+<p></p><h2>3 水平和垂直居中(常见div)</h2><br>3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 50%;</span><br><span class="line">    margin-top: -100px;</span><br><span class="line">    margin-left: -100px;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>3-2  行内元素居中比如文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>3-3  移动端常使用css3的transform:translate(x,y)属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 50%;</span><br><span class="line">    transform: translate(-50%,-50%);</span><br><span class="line">    -webkit-transform: translate(-50%,-50%);</span><br><span class="line">    -moz-transform: translate(-50%,-50%);</span><br><span class="line">    -ms-transform: translate(-50%,-50%);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>3-4  使用calc 支持Firefox 4 及更高版本浏览器，对于更早版本的浏览器，需要添加前缀，不支持IE8。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.one&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: calc(50% - 50px);</span><br><span class="line">    left: calc(50% - 50px);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/07/css居中/" data-id="cjdk9eh2g0003f4xc1vh1nnue" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/07/css居中/" data-id="cjdka33iq0001w8xcosynyirk" class="article-share-link">Teilen</a>
       
       
     </footer>
