@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -95,7 +95,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/10/项目集/" data-id="cjdh4sjkk0000xgxcm6vk2s3r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/02/10/项目集/" data-id="cjdk9eh230001f4xcgn8nqno2" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-表单验证" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/20/表单验证/" class="article-date">
+  <time datetime="2018-01-19T16:00:00.000Z" itemprop="datePublished">2018-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/20/表单验证/">表单验证</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>必填，长度为~字符<br>区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,<br>其他则为中文字符。注意中文占两个字符 </p>
+<figure class="highlight plain"><figcaption><span>checklength(name) &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    var len = document.getElementById(&apos;name&apos;).val();</span><br><span class="line">    var sum = 0;</span><br><span class="line">    var codeval;</span><br><span class="line">    for (let i = 0;i &lt; len.length;i++) &#123;</span><br><span class="line">        codeval = len.charCodeAt(i);</span><br><span class="line">        if (codeval &gt;= 0x00</span><br><span class="line">        &amp;&amp; codeval &lt;= 0xFF) &#123;</span><br><span class="line">            sum = sum + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            sum = sum + 2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; `</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证密码，邮箱，手机号码等利用正则表达式</p>
+</li>
+</ol>
+<p>2-1  验证邮箱的正则 规律是名称@域名<br>域名部分可以表示为<br>[a-zA-Z0-9<em>-]+(.[a-zA-Z0-9</em>-]+)+</p>
+<p>2-2  验证手机号码是否符合格式的正则</p>
+<pre><code>var mPattern = /^[1][3,4,5,7,8][0-9]{9}$/;
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/20/表单验证/" data-id="cjdk9eh1t0000f4xcv4dbn395" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -165,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/07/css居中/" data-id="cjdfv8wpw000060xc9dazksd7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/07/css居中/" data-id="cjdk9eh2g0003f4xc1vh1nnue" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -183,9 +233,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/产出/">产出</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/产出/">产出</a></li></ul>
     </div>
   </div>
 
@@ -198,7 +248,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -208,12 +258,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
             <a href="/2018/02/10/项目集/">my catalog</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/20/表单验证/">表单验证</a>
           </li>
         
           <li>

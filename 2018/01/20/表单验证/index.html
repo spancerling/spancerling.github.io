@@ -5,18 +5,18 @@
   
 
   
-  <title>css实现居中的小tips | spancerling&#39;s blog</title>
+  <title>表单验证 | spancerling&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 水平居中1-1  行内元素设置text-align: center1-2  定宽块状元素设置左右margin值为auto 2 垂直居中2-1  父元素高度确定的单行文本设置line-height的值为height; 3 水平和垂直居中(常见div)3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器.one {     position: absolute;     width: 20">
+  <meta name="description" content="必填，长度为~字符区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,其他则为中文字符。注意中文占两个字符  checklength(name) &amp;#123;1234567891011121314    var len = document.getElementById(&amp;apos;name&amp;apos;).val();    var sum = 0;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css实现居中的小tips">
-<meta property="og:url" content="http://yoursite.com/2018/01/07/css居中/index.html">
+<meta property="og:title" content="表单验证">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/表单验证/index.html">
 <meta property="og:site_name" content="spancerling&#39;s blog">
-<meta property="og:description" content="1 水平居中1-1  行内元素设置text-align: center1-2  定宽块状元素设置左右margin值为auto 2 垂直居中2-1  父元素高度确定的单行文本设置line-height的值为height; 3 水平和垂直居中(常见div)3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器.one {     position: absolute;     width: 20">
-<meta property="og:updated_time" content="2018-02-09T11:32:52.909Z">
+<meta property="og:description" content="必填，长度为~字符区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,其他则为中文字符。注意中文占两个字符  checklength(name) &amp;#123;1234567891011121314    var len = document.getElementById(&amp;apos;name&amp;apos;).val();    var sum = 0;">
+<meta property="og:updated_time" content="2018-02-12T13:48:43.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css实现居中的小tips">
-<meta name="twitter:description" content="1 水平居中1-1  行内元素设置text-align: center1-2  定宽块状元素设置左右margin值为auto 2 垂直居中2-1  父元素高度确定的单行文本设置line-height的值为height; 3 水平和垂直居中(常见div)3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器.one {     position: absolute;     width: 20">
+<meta name="twitter:title" content="表单验证">
+<meta name="twitter:description" content="必填，长度为~字符区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,其他则为中文字符。注意中文占两个字符  checklength(name) &amp;#123;1234567891011121314    var len = document.getElementById(&amp;apos;name&amp;apos;).val();    var sum = 0;">
   
     <link rel="alternate" href="/atom.xml" title="spancerling&#39;s blog" type="application/atom+xml">
   
@@ -63,14 +63,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-css居中" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-表单验证" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/01/07/css居中/" class="article-date">
-  <time datetime="2018-01-07T00:55:29.000Z" itemprop="datePublished">2018-01-07</time>
+    <a href="/2018/01/20/表单验证/" class="article-date">
+  <time datetime="2018-01-19T16:00:00.000Z" itemprop="datePublished">2018-01-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
   </div>
 
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      css实现居中的小tips
+      表单验证
     </h1>
   
 
@@ -89,41 +89,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p><h2>1 水平居中</h2><br>1-1  行内元素<br>设置text-align: center<br>1-2  定宽块状元素<br>设置左右margin值为auto<p></p>
-<p></p><h2>2 垂直居中</h2><br>2-1  父元素高度确定的单行文本<br>设置line-height的值为height;<p></p>
-<p></p><h2>3 水平和垂直居中(常见div)</h2><br>3-1  知道宽高的情况下采用绝对定位的方式，兼容基本浏览器<br><code>.one {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
-}</code><br>3-2  行内元素居中比如文字<br><code>.one {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-}</code><br>3-3  移动端常使用css3的transform:translate(x,y)属性<br><code>.one {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}</code><br>3-4  使用calc 支持Firefox 4 及更高版本浏览器，对于更早版本的浏览器，需要添加前缀，不支持IE8。<br><code>.one {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
-}</code><p></p>
-
+        <ol>
+<li><p>必填，长度为~字符<br>区分中英文字符，javascript里为16位编码。英文字符只可能落在0x00 ~ 0Xff,<br>其他则为中文字符。注意中文占两个字符 </p>
+<figure class="highlight plain"><figcaption><span>checklength(name) &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    var len = document.getElementById(&apos;name&apos;).val();</span><br><span class="line">    var sum = 0;</span><br><span class="line">    var codeval;</span><br><span class="line">    for (let i = 0;i &lt; len.length;i++) &#123;</span><br><span class="line">        codeval = len.charCodeAt(i);</span><br><span class="line">        if (codeval &gt;= 0x00</span><br><span class="line">        &amp;&amp; codeval &lt;= 0xFF) &#123;</span><br><span class="line">            sum = sum + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            sum = sum + 2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; `</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证密码，邮箱，手机号码等利用正则表达式</p>
+</li>
+</ol>
+<p>2-1  验证邮箱的正则 规律是名称@域名<br>域名部分可以表示为<br>[a-zA-Z0-9<em>-]+(.[a-zA-Z0-9</em>-]+)+</p>
+<p>2-2  验证手机号码是否符合格式的正则</p>
+<pre><code>var mPattern = /^[1][3,4,5,7,8][0-9]{9}$/;
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/07/css居中/" data-id="cjdk9eh2g0003f4xc1vh1nnue" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/20/表单验证/" data-id="cjdk9eh1t0000f4xcv4dbn395" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -132,15 +112,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/01/20/表单验证/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/10/项目集/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
-          表单验证
+          my catalog
         
       </div>
     </a>
   
+  
+    <a href="/2018/01/07/css居中/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">css实现居中的小tips</div>
+    </a>
   
 </nav>
 
